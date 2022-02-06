@@ -1,5 +1,6 @@
 # PAM
 
+# Project Description
 completely discuss what PAM is
 and fully explain your project and the modifications your made. A reader should be able to duplicate your
 work directly by following your shared space. Graphics and images are very important to include. 
@@ -8,7 +9,7 @@ Description of PAM: Pluggable Authentication Modules (PAM) is a xxxxxxx.
 
 This project improves system security by establishing two-factor authentication requiring a user to not only know a password, but also have a removable USB device, in order to authenticate.
 
-Prerequisites
+# Prerequisites
 
 Kali Linux base install on a virtual machine
 Debian
@@ -16,41 +17,42 @@ USB device
 No other deviations to pam.d files (could cause fatal error in step 2 below.
 Others?xxxx
 
-Steps
+# Steps
 
 Install the pam_usb prerequisites by typing the following command
-  # sudo apt install git libxml2-dev libpam0g-dev libudisks2-dev libglib2.0-dev gir1.2-udisks-2.0 python3 python3-gi
+  $ sudo apt install git libxml2-dev libpam0g-dev libudisks2-dev libglib2.0-dev gir1.2-udisks-2.0 python3 python3-gi
   
 Clone the pam_usb GitHub repository and compile the code to install it with the following commands
-  # git clone https://github.com/mcdope/pam_usb.git
-  # cd pam_usb/
-  # make
-  # sudo make install
+  $ git clone https://github.com/mcdope/pam_usb.git
+  $ cd pam_usb/
+  $ make
+  $ sudo make install
   
 Add the usb device intended for authentication with the following command, where "USB20FD" is the name of the removable device
-  # sudo pamusb-conf --add-device USB20FD
+  $ sudo pamusb-conf --add-device USB20FD
  
 Save the changes to the file
-  # Y
+  $ Y
   
 Next, define a user for PAM authentication with the following command, where "tim" is the name of a user that exists on the system
-  # sudo pamusb-conf --add-user tim
+  $ sudo pamusb-conf --add-user tim
   
  Save the changes to the file
-  # Y
+  $ Y
   
  At this point, PAM files have been edited to enable the USB device to replace the need for a password.  A user can still login as before with their password, but now if the USB is detected a password is no longer required.  The next step will adjust a module in the common-auth file in /etc/pam.d to require both USB and password for successful logins.
  
 Go to the PAM directory
-  # sudo cd /etc/pam.d
+  $ sudo cd /etc/pam.d
 
 Open the common-auth file
-  # nano common-auth
+  $ nano common-auth
   
 Change the pam_usb.so module control flag from "sufficient" to "required"
-  # auth  required  pam_usb.so
+  $ auth  required  pam_usb.so
  
 Save the changes
-  # Y
-  
+  $ Y
+
+# Conclusion
 Now, login attempts will fail when the USB is not inserted into the device.
