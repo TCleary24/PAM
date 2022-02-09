@@ -22,26 +22,26 @@ Others?xxxx
 Install the pam_usb prerequisites by typing the following command <br />
  <br />
   $ sudo apt install git libxml2-dev libpam0g-dev libudisks2-dev libglib2.0-dev gir1.2-udisks-2.0 python3 python3-gi
- 
+  <br />
  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/prereq%20installation.png)
   
-  
+   <br />
 Clone the pam_usb GitHub repository and compile the code to install it with the following commands <br />
   $ git clone https://github.com/mcdope/pam_usb.git <br />
   $ cd pam_usb/ <br />
   $ make <br />
   $ sudo make install <br />
   
-   ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/github%20compile.png)
+   ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/github%20compile.png) <br />
   
 Add the usb device intended for authentication with the following command, where "USB20FD" is the name of the removable device <br />
-  $ sudo pamusb-conf --add-device USB20FD
+  $ sudo pamusb-conf --add-device USB20FD <br />
   
   ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/add%20device.png)
- 
+  <br />
 Save the changes to the file <br />
   $ Y
-  
+   <br />
 Next, define a user for PAM authentication with the following command, where "tim" is the name of a user that exists on the system <br />
   $ sudo pamusb-conf --add-user tim
   
@@ -50,7 +50,7 @@ Next, define a user for PAM authentication with the following command, where "ti
  Save the changes to the file <br />
   $ Y
   
- At this point, PAM files have been edited to enable the USB device to replace the need for a password.  A user can still login as before with their password, but now if the USB is detected a password is no longer required.  The next step will adjust a module in the common-auth file in /etc/pam.d to require both USB and password for successful logins.
+ At this point, PAM files have been edited to enable the USB device to replace the need for a password.  A user can still login as before with their password, but now if the USB is detected a password is no longer required.  The next step will adjust a module in the common-auth file in /etc/pam.d to require both USB and password for successful logins. <br />
  
 Go to the PAM directory <br />
   $ sudo cd /etc/pam.d
