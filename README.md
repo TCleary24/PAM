@@ -20,6 +20,7 @@ Others?xxxx
 # Steps
 
 Install the pam_usb prerequisites by typing the following command <br />
+ <br />
   $ sudo apt install git libxml2-dev libpam0g-dev libudisks2-dev libglib2.0-dev gir1.2-udisks-2.0 python3 python3-gi
  
  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/prereq%20installation.png)
