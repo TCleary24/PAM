@@ -19,14 +19,14 @@ Others?xxxx
 
 # Steps
 
-Install the pam_usb prerequisites by typing the following command <br />
+Install the pam_usb prerequisites by typing the following command: <br />
  <br />
   $ sudo apt install git libxml2-dev libpam0g-dev libudisks2-dev libglib2.0-dev gir1.2-udisks-2.0 python3 python3-gi
   <br />
  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/prereq%20installation.png)
   
    <br />
-Clone the pam_usb GitHub repository and compile the code to install it with the following commands <br />
+Clone the pam_usb GitHub repository and compile the code to install it with the following commands: <br />
   $ git clone https://github.com/mcdope/pam_usb.git <br />
   $ cd pam_usb/ <br />
   $ make <br />
@@ -34,7 +34,7 @@ Clone the pam_usb GitHub repository and compile the code to install it with the 
   
    ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/github%20compile.png) <br />
   
-Add the usb device intended for authentication with the following command, where "USB20FD" is the name of the removable device <br />
+Add the usb device intended for authentication with the following command, where "USB20FD" is the name of the removable device: <br />
   $ sudo pamusb-conf --add-device USB20FD <br />
   
   ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/add%20device.png)
@@ -42,6 +42,11 @@ Add the usb device intended for authentication with the following command, where
 Save the changes to the file <br />
   $ Y
    <br />
+   
+Note: The device name can be found on the desktop after the device connection is established. <br />
+
+![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/device%20name%20homescreen.png)<br />
+
 Next, define a user for PAM authentication with the following command, where "tim" is the name of a user that exists on the system <br />
   $ sudo pamusb-conf --add-user tim
   
