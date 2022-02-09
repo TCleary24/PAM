@@ -13,7 +13,8 @@ The following steps were used to establish the necessary configuration implement
 # Prerequisites
 VMWare: https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html <br />
 Kali Linux base install using Debian OS: https://www.kali.org/get-kali/#kali-bare-metal <br />
-Removable USB device <br />
+Login as SU or root  <br />
+Removable USB device available <br />
 No prior changes to pam.d files (could cause fatal error during new module compilation below) <br />
 
 
