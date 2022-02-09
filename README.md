@@ -75,11 +75,11 @@ Add the below pam_usb.so module below, setting the type to "auth" and the contro
   $ auth  required  pam_usb.so
   $ auth [success=1 default=ignore] pam_unix.so nullok try_first_pass <br />
    <br />
- Initial PAM common-auth file
+ Initial PAM common-auth file <br />
 ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_initial.png)
   <br />
    <br />
- Final PAM common-auth file
+ Final PAM common-auth file <br />
 ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_final.png)
  
  
