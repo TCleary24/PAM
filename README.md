@@ -6,7 +6,6 @@ Description of PAM: Pluggable Authentication Modules (PAM) are a feature in Linu
 <br />
 PAM functions with configuration files located in /etc/pam.d on the Debian release of Linux.  There is also a configuration file that is present, but is ignored in the presence of the PAM directory.  Authentication occurs by passing through a series of stacked modules.  The modules are run from top to bottom and a response is generated as pass or fail depending on the result of the series of rules defined in the modules. <br />
 <br />
-
 This project improves system security by establishing two-factor authentication requiring a user to not only know a password, but also have a removable USB device, in order to authenticate.  It leverages code that adjusts the PAM common-auth configuration file by installing a new USB module and reconfiguring the control flag to require a USB in addition to a password. <br />
 <br />
 The following steps were used to establish the necessary configuration implementing 2FA using a USB.  Note that changes to PAM files should be made with great care as errors could result in a user being completely locked out of a system.
