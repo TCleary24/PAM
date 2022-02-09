@@ -1,9 +1,6 @@
 # PAM
 
 # Project Description
-completely discuss what PAM is
-and fully explain your project and the modifications your made. A reader should be able to duplicate your
-work directly by following your shared space. Graphics and images are very important to include. 
 
 Description of PAM: Pluggable Authentication Modules (PAM) are a feature in Linux that function as an API that authenticates services and users on a system.  This allows the rules for authentication to be dynamically configurable, allowing for a system administrator to define how users and applications authenticate within the Linux system. <br />
 <br />
