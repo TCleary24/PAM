@@ -31,10 +31,12 @@ Clone the pam_usb GitHub repository and compile the code to install it with the 
   $ cd pam_usb/ <br />
   $ make <br />
   $ sudo make install <br />
+   <br />
   
    ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/install%20screen.png) <br />
   
 Add the usb device intended for authentication with the following command, where "USB20FD" is the name of the removable device: <br />
+ <br />
   $ sudo pamusb-conf --add-device USB20FD <br />
   
   ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/add%20device.png)
@@ -45,9 +47,10 @@ Note: The device name can be found on the desktop after the device connection is
 ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/device%20name%20homescreen.png)<br />
 
 Save the changes to the file <br />
-  $ Y
+  $ Y <br />
    <br />
 Next, define a user for PAM authentication with the following command, where "tim" is the name of a user that exists on the system: <br />
+ <br />
   $ sudo pamusb-conf --add-user tim
   
   ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/add%20user.png)
@@ -65,7 +68,10 @@ Open the common-auth file: <br />
   
 ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/edit%20pamd.png)
   
-Change the pam_usb.so module control flag from "sufficient" to "required": <br />
+ <br />
+The configuration modules can be seen in white text where the rules are run from top to bottom.  Each row follows a common syntax with Type, Control Flag, Module, and Module Argument.
+<br />
+Add the below pam_usb.so module below, setting the type to "auth" and the control flag to "required".  : <br />
   $ auth  required  pam_usb.so
  
  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_initial.png)
