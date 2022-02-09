@@ -37,7 +37,7 @@ Clone the pam_usb GitHub repository and compile the code to install it with the 
    ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/install%20screen.png) <br />
 
 <br />
-Allow services to be restarted without asking to allow for faster installation once the following screen is presented by selecting "Yes".
+Allow services to be restarted without asking to allow for faster installation once the following screen is presented by selecting "Yes". <br />
  <br />
 
 ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/restartservicesmessage.png)
