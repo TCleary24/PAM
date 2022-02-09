@@ -73,7 +73,7 @@ Change the pam_usb.so module control flag from "sufficient" to "required": <br /
  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_final.png)
  
  
-Save the changes: <br />
+Exit and save the changes: <br />
   $ Y
 
 # Conclusion
