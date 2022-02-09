@@ -39,14 +39,14 @@ Add the usb device intended for authentication with the following command, where
   
   ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/add%20device.png)
   <br />
-Save the changes to the file <br />
-  $ Y
-   <br />
    
 Note: The device name can be found on the desktop after the device connection is established. <br />
 
 ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/device%20name%20homescreen.png)<br />
 
+Save the changes to the file <br />
+  $ Y
+   <br />
 Next, define a user for PAM authentication with the following command, where "tim" is the name of a user that exists on the system: <br />
   $ sudo pamusb-conf --add-user tim
   
