@@ -47,25 +47,25 @@ Note: The device name can be found on the desktop after the device connection is
 
 ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/device%20name%20homescreen.png)<br />
 
-Next, define a user for PAM authentication with the following command, where "tim" is the name of a user that exists on the system <br />
+Next, define a user for PAM authentication with the following command, where "tim" is the name of a user that exists on the system: <br />
   $ sudo pamusb-conf --add-user tim
   
   ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/add%20user.png)
   
- Save the changes to the file <br />
+ Save the changes to the file: <br />
   $ Y
   
  At this point, PAM files have been edited to enable the USB device to replace the need for a password.  A user can still login as before with their password, but now if the USB is detected a password is no longer required.  The next step will adjust a module in the common-auth file in /etc/pam.d to require both USB and password for successful logins. <br />
  
-Go to the PAM directory <br />
+Go to the PAM directory: <br />
   $ sudo cd /etc/pam.d
     
-Open the common-auth file <br />
+Open the common-auth file: <br />
   $ nano common-auth
   
 ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/edit%20pamd.png)
   
-Change the pam_usb.so module control flag from "sufficient" to "required" <br />
+Change the pam_usb.so module control flag from "sufficient" to "required": <br />
   $ auth  required  pam_usb.so
  
  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_initial.png)
@@ -73,7 +73,7 @@ Change the pam_usb.so module control flag from "sufficient" to "required" <br />
  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_final.png)
  
  
-Save the changes <br />
+Save the changes: <br />
   $ Y
 
 # Conclusion
