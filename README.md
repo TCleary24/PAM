@@ -71,11 +71,15 @@ Open the common-auth file: <br />
  <br />
 The configuration modules can be seen in white text where the rules are run from top to bottom.  Each row follows a common syntax with Type, Control Flag, Module, and Module Argument. <br />
 <br />
-Add the below pam_usb.so module below, setting the type to "auth" and the control flag to "required".  : <br />
+Add the below pam_usb.so module below, setting the type to "auth" and the control flag to "required".  Next, set a module argument for the pam_unix.so module to "try_first_pass": <br />
   $ auth  required  pam_usb.so
- 
+  $ auth [success=1 default=ignore] pam_unix.so nullok try_first_pass <br />
+   <br />
+  Initial PAM common-auth file
  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_initial.png)
- 
+  <br />
+   <br />
+  Final PAM common-auth file
  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_final.png)
  
  
