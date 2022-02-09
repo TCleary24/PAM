@@ -31,6 +31,8 @@ Clone the pam_usb GitHub repository and compile the code to install it with the 
   $ make
   $ sudo make install
   
+   ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/github%20compile.png)
+  
 Add the usb device intended for authentication with the following command, where "USB20FD" is the name of the removable device
   $ sudo pamusb-conf --add-device USB20FD
  
