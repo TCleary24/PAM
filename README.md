@@ -11,7 +11,7 @@ This project improves system security by establishing two-factor authentication 
 The following steps were used to establish the necessary configuration implementing 2FA using a USB.  Note that changes to PAM files should be made with great care as errors could result in a user being completely locked out of a system.
 
 # Prerequisites
-VMWare: https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
+VMWare: https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html <br />
 Kali Linux base install using Debian OS: https://www.kali.org/get-kali/#kali-bare-metal <br />
 Removable USB device <br />
 No prior changes to pam.d files (could cause fatal error in step 2 below) <br />
