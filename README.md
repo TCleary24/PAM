@@ -69,7 +69,7 @@ Open the common-auth file: <br />
 ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/edit%20pamd.png)
   
  <br />
-The configuration modules can be seen in white text where the rules are run from top to bottom.  Each row follows a common syntax with Type, Control Flag, Module, and Module Argument.
+The configuration modules can be seen in white text where the rules are run from top to bottom.  Each row follows a common syntax with Type, Control Flag, Module, and Module Argument. <br />
 <br />
 Add the below pam_usb.so module below, setting the type to "auth" and the control flag to "required".  : <br />
   $ auth  required  pam_usb.so
