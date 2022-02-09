@@ -35,12 +35,16 @@ Clone the pam_usb GitHub repository and compile the code to install it with the 
   
 Add the usb device intended for authentication with the following command, where "USB20FD" is the name of the removable device
   $ sudo pamusb-conf --add-device USB20FD
+  
+  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/add%20device.png)
  
 Save the changes to the file
   $ Y
   
 Next, define a user for PAM authentication with the following command, where "tim" is the name of a user that exists on the system
   $ sudo pamusb-conf --add-user tim
+  
+  ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/add%20user.png)
   
  Save the changes to the file
   $ Y
@@ -49,12 +53,19 @@ Next, define a user for PAM authentication with the following command, where "ti
  
 Go to the PAM directory
   $ sudo cd /etc/pam.d
-
+    
 Open the common-auth file
   $ nano common-auth
   
+![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/edit%20pamd.png)
+  
 Change the pam_usb.so module control flag from "sufficient" to "required"
   $ auth  required  pam_usb.so
+ 
+ ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_initial.png)
+ 
+ ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/common_auth_final.png
+ 
  
 Save the changes
   $ Y
