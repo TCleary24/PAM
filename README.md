@@ -35,7 +35,16 @@ Clone the pam_usb GitHub repository and compile the code to install it with the 
    <br />
   
    ![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/install%20screen.png) <br />
-  
+
+<br />
+Allow services to be restarted without asking to allow for faster installation once the following screen is presented by selecting "Yes".
+ <br />
+
+![alt text](https://github.com/TCleary24/PAM_USB_2FA/blob/main/restartservicesmessage.png)
+
+<br />
+
+
 Add the usb device intended for authentication with the following command, where "USB20FD" is the name of the removable device: <br />
  <br />
   $ sudo pamusb-conf --add-device USB20FD <br />
