@@ -68,7 +68,7 @@ Next, define a user for PAM authentication with the following command, where "ti
  Save the changes to the file: <br />
   $ Y
   
- At this point, PAM files have been edited to enable the USB device to replace the need for a password.  A user can still login as before with their password, but now if the USB is detected a password is no longer required.  The next step will adjust a module in the common-auth file in /etc/pam.d to require both USB and password for successful logins. <br />
+The next steps involve navigating to the PAM directory and modifying the necessary files.  It is recommended to open another terminal as root so that any mistakes can be corrected without causing complete system lockout. <br />
  
 Go to the PAM directory: <br />
   $ sudo cd /etc/pam.d
