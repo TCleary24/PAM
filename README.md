@@ -2,7 +2,7 @@
 
 # Project Description
 
-Description of PAM: Pluggable Authentication Modules (PAM) are a feature in Linux that function as an API that authenticates services and users on a system.  This allows the rules for authentication to be dynamically configurable, allowing for a system administrator to define how users and applications authenticate within the Linux system. <br />
+Pluggable Authentication Modules (PAM) are a feature in Linux that function as an API that authenticates services and users on a system.  This allows the rules for authentication to be dynamically configurable, allowing for a system administrator to define how users and applications authenticate within the Linux system. <br />
 <br />
 PAM functions with configuration files located in /etc/pam.d on the Debian release of Linux.  There is also a configuration file that is present, but is ignored in the presence of the PAM directory.  Authentication occurs by passing through a series of stacked modules.  The modules are run from top to bottom and a response is generated as pass or fail depending on the result of the series of rules defined in the modules. <br />
 <br />
@@ -11,12 +11,11 @@ This project improves system security by establishing two-factor authentication 
 The following steps were used to establish the necessary configuration implementing 2FA using a USB.  Note that changes to PAM files should be made with great care as errors could result in a user being completely locked out of a system.
 
 # Prerequisites
+VMWare: https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
+Kali Linux base install using Debian OS: https://www.kali.org/get-kali/#kali-bare-metal <br />
+Removable USB device <br />
+No prior changes to pam.d files (could cause fatal error in step 2 below) <br />
 
-Kali Linux base install on a virtual machine <br />
-Debian <br />
-USB device <br />
-No other deviations to pam.d files (could cause fatal error in step 2 below) <br />
-Others?xxxx
 
 # Steps
 
