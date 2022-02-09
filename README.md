@@ -78,4 +78,4 @@ Exit and save the changes: <br />
   $ Y
 
 # Conclusion
-Now, login attempts will fail when the USB is not inserted into the device.
+Now, login attempts will fail when the USB is not inserted into the device.  These settings can be further customized to establish authentication requirements by adjusting the control flags.  For example, the pam_usb.so module could be given the "sufficient" control flag that would allow login immediately in the presence of the defined USB, without requiring a password.
