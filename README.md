@@ -26,7 +26,7 @@ Install the pam_usb prerequisites by typing the following command
   
   
 Clone the pam_usb GitHub repository and compile the code to install it with the following commands
-  $ git clone https://github.com/mcdope/pam_usb.git
+  $ git clone https://github.com/mcdope/pam_usb.git <br />
   $ cd pam_usb/
   $ make
   $ sudo make install
