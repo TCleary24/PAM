@@ -72,6 +72,7 @@ Open the common-auth file: <br />
 The configuration modules can be seen in white text where the rules are run from top to bottom.  Each row follows a common syntax with Type, Control Flag, Module, and Module Argument. <br />
 <br />
 Add the below pam_usb.so module below, setting the type to "auth" and the control flag to "required".  Next, set a module argument for the pam_unix.so module to "try_first_pass": <br />
+ <br />
   $ auth  required  pam_usb.so <br />
   $ auth [success=1 default=ignore] pam_unix.so nullok try_first_pass <br />
    <br />
