@@ -11,10 +11,10 @@ This project improves system security by establishing two-factor authentication 
 
 # Prerequisites
 
-Kali Linux base install on a virtual machine
-Debian
-USB device
-No other deviations to pam.d files (could cause fatal error in step 2 below.
+Kali Linux base install on a virtual machine <br />
+Debian <br />
+USB device <br />
+No other deviations to pam.d files (could cause fatal error in step 2 below) <br />
 Others?xxxx
 
 # Steps
